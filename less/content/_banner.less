@@ -1,0 +1,77 @@
+.banner {
+    position: relative;
+    max-height: 950px;
+    overflow: hidden;
+    &-item {
+        img {
+            width: 100%;
+            display: block;
+        }
+        .layer-1 {
+            position: absolute;
+            top: -34%;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .layer-2 {
+            position: absolute;
+            width: 23%;
+            top: 20%;
+            right: 18.2%;
+            z-index: 2;
+        }
+        .layer-3 {
+            position: absolute;
+            width: 23%;
+            top: 20%;
+            right: 18.2%;
+            z-index: 3;
+        }
+    }
+    &-content {
+        position: absolute;
+        top: 32.5%;
+        left: 49.99%;
+        .transform(translate(-50%, 0));
+        z-index: 3;
+        &-inner {
+            .col (48.6666%);
+            .banner-title {
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 60px;
+                color: @text-white-color;
+                span {
+                    font-size: 40px;
+                    font-weight: 700;
+                    color: @text-white-color;
+                }
+            }
+            .banner-summary {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 23px;
+                margin-top: 21px;
+                margin-bottom: 54px;
+                color: @text-white-color;
+            }
+            .banner-btn {
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                .transit(all, 0.5s);
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                color: @text-white-color;
+                background-color: transparent;
+                border: 1px solid #fff;
+                padding: 14px 47px;
+                margin-left: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

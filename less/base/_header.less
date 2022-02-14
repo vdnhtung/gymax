@@ -1,0 +1,84 @@
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    opacity: 0;
+    z-index: -1;
+}
+.cover.active {
+    opacity: 0.9;
+    z-index: 100;
+    .transit(all, .5s);
+}
+.header {
+    .logo-mobile {
+        text-align: center;
+        display: none;
+    }
+    font-size: 16px;
+    font-weight: 400;
+    color: @text-white-color;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    padding-top: 22.5px;
+    padding-bottom: 16.5px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    &-inner {
+        .flex();
+        nav {
+            .nav-icon {
+                display: none;
+                font-size: 16px;
+                i {
+                    font-size: 16px;
+                    vertical-align: middle;
+                    padding-left: 10px;
+                }
+            }
+            .navbar {
+                .nav-title {
+                    display: none;
+                    background-color: #222;
+                    color: @text-white-color;
+                    line-height: 50px;
+                    font-size: 24px;
+                    font-weight: 500;
+                    padding: 0 15px;
+                }
+                .nav-item {
+                    display: inline-block;
+                    margin-left: 16px;
+                    margin-right: 32px;
+                    a {
+                        font-weight: 400;
+                        color: @text-white-color;
+                    }
+                    &:nth-child(2) {
+                        margin-left: -6px;
+                    }
+
+                }
+            }
+        }
+        .form-control {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            .search {
+                padding-right: 27px;
+            }
+            .basket {
+                padding: 0 27px;
+                border-left: 1px solid @summary-color;
+                border-right: 1px solid @summary-color;
+            }
+            .user {
+                padding-left: 27px;
+            }
+        }
+    }
+}
